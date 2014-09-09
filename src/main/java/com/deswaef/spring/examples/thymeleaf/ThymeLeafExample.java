@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.qkyrie.spring.examples.thymeleaf;
+package com.deswaef.spring.examples.thymeleaf;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
