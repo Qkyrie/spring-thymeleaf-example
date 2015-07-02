@@ -1,10 +1,16 @@
 buildscript {
+    ext {
+        springBootVersion = '1.2.5.RELEASE'
+    }
     repositories {
-        maven { url "http://repo.spring.io/libs-milestone" }
+        // NOTE: You should declare only repositories that you need here
         mavenLocal()
+        mavenCentral()
+        maven { url "http://repo.spring.io/release" }
+        maven { url "http://repo.spring.io/milestone" }
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.7.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
     }
 }
 
@@ -23,8 +29,12 @@ run {
 }
 
 repositories {
+    // NOTE: You should declare only repositories that you need here
+    mavenLocal()
     mavenCentral()
-    maven { url "http://repo.spring.io/libs-milestone" }
+    maven { url "http://repo.spring.io/release" }
+    maven { url "http://repo.spring.io/milestone" }
+    maven { url "http://repo.spring.io/snapshot" }
 }
 
 dependencies {
